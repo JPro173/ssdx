@@ -1,0 +1,30 @@
+import curses
+import loader
+from screen import screen
+
+def draw(path):
+    color_active = curses.color_pair(1)
+    color_inactive = curses.color_pair(2)
+
+    screen.printcn(0, 0, 'SSDX')
+    screen.printcn(1, 0, 'choose menu or command')
+
+    lst = list(loader.get_list(path).keys())
+
+    limit_cursor(len(lst))
+
+    for i in range(screen.mpos[0]):
+        active =  i+3 == screen.cpos[0]
+
+        color = color_active if active else color_inactive
+
+        if i < len(lst):
+            screen.println(i+3, 1, lst[i], color)
+
+def limit_cursor(app_count):
+    if screen.cpos[0] > 3 + app_count-1:
+        screen.cpos[0] = 3 + app_count-1
+    if screen.cpos[0] < 3:
+        screen.cpos[0] = 3
+    screen.cpos[1] = 1
+

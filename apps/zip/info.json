@@ -1,0 +1,34 @@
+{
+    "title": "Zip",
+    "info": "Zip files in one arhive",
+    "commands": {
+        "zip": {
+            "args": ["filename"],
+            "command": "zip -r {filename}.zip {filename}"
+        },
+        "unzip": {
+            "args": ["filename"],
+            "command": "unzip {filename}"
+        }
+
+    },
+    "list":{
+        "List A": {
+            "element1": "zip",
+            "element2": "zip",
+            "element3": "zip",
+            "element4": "zip"
+        },
+        "List B": {
+            "List C": {
+                "element9": "zip",
+                "element0": "zip"
+            },
+            "element5": "zip",
+            "element6": "zip",
+            "element7": "zip",
+            "element8": "zi"
+        }
+    }
+
+}

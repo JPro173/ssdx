@@ -1,0 +1,28 @@
+{
+    "title": "Touch",
+    "info": "Creates new file",
+    "commands": {
+        "touch": {
+            "args": ["filename"],
+            "command": "touch {filename}"
+        }
+    },
+    "list":{
+        "List A": {
+            "element1": "touch",
+            "element2": "touch",
+            "element3": "touch",
+            "element4": "touch"
+        },
+        "List B": {
+            "List C": {
+                "element9": "touch",
+                "element0": "touch"
+            },
+            "element5": "touch",
+            "element6": "touch",
+            "element7": "touch",
+            "element8": "touch"
+        }
+    }
+}
